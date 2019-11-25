@@ -1,3 +1,34 @@
+@import 'var';
+
+.fade-in-linear-enter-active,
+.fade-in-linear-leave-active {
+    transition: $--fade-linear-transition;
+}
+.fade-in-linear-enter,
+.fade-in-linear-leave,
+.fade-in-linear-leave-active {
+    opacity: 0;
+}
+
+.s-fade-in-linear-enter-active,
+.s-fade-in-linear-leave-active {
+    transition: $--fade-linear-transition;
+}
+.s-fade-in-linear-enter,
+.s-fade-in-linear-leave,
+.s-fade-in-linear-leave-active {
+    opacity: 0;
+}
+
+.s-fade-in-enter-active,
+.s-fade-in-leave-active {
+    transition: all 0.3s cubic-bezier(0.55, 0, 0.1, 1);
+}
+.s-fade-in-enter,
+.s-fade-in-leave-active {
+    opacity: 0;
+}
+
 .s-zoom-in-center-enter-active,
 .s-zoom-in-center-leave-active {
     transition: all 0.3s cubic-bezier(0.55, 0, 0.1, 1);
@@ -6,4 +37,64 @@
 .s-zoom-in-center-leave-active {
     opacity: 0;
     transform: scaleX(0);
+}
+
+.s-zoom-in-top-enter-active,
+.s-zoom-in-top-leave-active {
+    opacity: 1;
+    transform: scaleY(1);
+    transition: $--md-fade-transition;
+    transform-origin: center top;
+}
+.s-zoom-in-top-enter,
+.s-zoom-in-top-leave-active {
+    opacity: 0;
+    transform: scaleY(0);
+}
+
+.s-zoom-in-bottom-enter-active,
+.s-zoom-in-bottom-leave-active {
+    opacity: 1;
+    transform: scaleY(1);
+    transition: $--md-fade-transition;
+    transform-origin: center bottom;
+}
+.s-zoom-in-bottom-enter,
+.s-zoom-in-bottom-leave-active {
+    opacity: 0;
+    transform: scaleY(0);
+}
+
+.s-zoom-in-left-enter-active,
+.s-zoom-in-left-leave-active {
+    opacity: 1;
+    transform: scale(1, 1);
+    transition: $--md-fade-transition;
+    transform-origin: top left;
+}
+.s-zoom-in-left-enter,
+.s-zoom-in-left-leave-active {
+    opacity: 0;
+    transform: scale(0.45, 0.45);
+}
+
+.collapse-transition {
+    transition: 0.3s height ease-in-out, 0.3s padding-top ease-in-out, 0.3s padding-bottom ease-in-out;
+}
+.horizontal-collapse-transition {
+    transition: 0.3s width ease-in-out, 0.3s padding-left ease-in-out, 0.3s padding-right ease-in-out;
+}
+
+.s-list-enter-active,
+.s-list-leave-active {
+    transition: all 1s;
+}
+.s-list-enter,
+.s-list-leave-active {
+    opacity: 0;
+    transform: translateY(-30px);
+}
+
+.s-opacity-transition {
+    transition: opacity 0.3s cubic-bezier(0.55, 0, 0.1, 1);
 }

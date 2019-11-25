@@ -1,0 +1,30 @@
+{
+    "root": true,
+    "env": {
+        "browser": true,
+        "commonjs": true,
+        "es6": true
+    },
+    "parserOptions": {
+        "ecmaVersion": 2015,
+        "sourceType": "module"
+    },
+    "globals": {
+        "$": true,
+        "log": true,
+        "G": true,
+        "Utils": true
+    },
+    "extends": ["plugin:vue/essential"],
+    "rules": {
+        "no-console": "off",
+        "no-debugger": "off",
+        "semi": [2, "always"],
+        "quotes": [1, "single"],
+        "eqeqeq": "off",
+        "linebreak-style": [2, "unix"],
+        "indent": [2, 4],
+        "comma-dangle": [2, "only-multiline"],
+        "no-useless-call": "off"
+    }
+}

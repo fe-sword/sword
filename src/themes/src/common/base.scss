@@ -1,1 +1,16 @@
-@import './transition.scss';
+@import 'transition';
+
+html {
+    font-family: $--font-family-sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: $--color-text-primary;
+    line-height: 1.15;
+    font-size: 14px;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}

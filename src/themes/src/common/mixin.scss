@@ -1,5 +1,5 @@
-@import './var.scss';
-@import './function.scss';
+@import 'var';
+@import 'function';
 
 // BEM
 @mixin b($block) {
@@ -11,22 +11,6 @@
 }
 
 @mixin e($element) {
-    $E: $element !global;
-    $selector: &;
-
-    $currentSelector: '';
-    @each $unit in $element {
-        $currentSelector: #{$currentSelector + '.' + $B + $element-separator + $unit + ','};
-    }
-
-    @at-root {
-        #{$currentSelector} {
-            @content;
-        }
-    }
-}
-
-@mixin m($element) {
     $E: $element !global;
     $selector: &;
     $currentSelector: '';
@@ -47,6 +31,20 @@
             #{$currentSelector} {
                 @content;
             }
+        }
+    }
+}
+
+@mixin m($modifier) {
+    $selector: &;
+    $currentSelector: '';
+    @each $unit in $modifier {
+        $currentSelector: #{$currentSelector + & + $modifier-separator + $unit + ','};
+    }
+
+    @at-root {
+        #{$currentSelector} {
+            @content;
         }
     }
 }

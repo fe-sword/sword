@@ -1,53 +1,73 @@
 <template>
-    <div class="s-badge">
+    <div :class="badgeClassName">
         <slot></slot>
         <transition name="s-zoom-in-center">
-            <sup
-                v-show="!hidden && (content || content === 0 || isDot)"
-                v-text="content"
-                class="s-badge__content"
-                :class="[
-                    's-badge__content--' + type,
-                    {
-                        'is-fixed': $slots.default,
-                        'is-dot': isDot,
-                    },
-                ]"
-            >
-            </sup>
+            <sup v-show="show" v-text="content" :class="badgeCountClassName"></sup>
         </transition>
     </div>
 </template>
 
 <script>
+const prefix = 's-badge';
+const Props = {
+    type: new Set(['primary', 'success', 'warning', 'info', 'danger']),
+};
+
 export default {
     name: 'Badge',
 
     props: {
-        value: [String, Number],
-        max: Number,
+        count: {
+            type: Number,
+            default: 0,
+        },
+        max: {
+            type: Number,
+            default: 99,
+        },
         isDot: Boolean,
         hidden: Boolean,
         type: {
             type: String,
-            validator(val) {
-                return ['primary', 'success', 'warning', 'info', 'danger'].indexOf(val) > -1;
+            validator(value) {
+                return Props.type.has(value);
             },
         },
     },
 
     computed: {
+        badgeClassName() {
+            return {
+                [`${prefix}`]: true,
+            };
+        },
+        badgeCountClassName() {
+            const { type, isDot, $slots } = this;
+
+            return {
+                ['is-dot']: isDot,
+                ['is-fixed']: $slots.default,
+                [`${prefix}__content`]: true,
+                [`${prefix}__content--${type}`]: true,
+            };
+        },
+        show() {
+            const { hidden, content, isDot } = this;
+
+            return !hidden && (content || content === 0 || isDot);
+        },
         content() {
-            if (this.isDot) return;
+            const { isDot, count, max } = this;
 
-            const value = this.value;
-            const max = this.max;
-
-            if (typeof value === 'number' && typeof max === 'number') {
-                return max < value ? `${max}+` : value;
+            if (isDot) {
+                return null;
             }
 
-            return value;
+            if (!isNaN(count) && !isNaN(max)) {
+                return max < count ? `${max}+` : count;
+            }
+
+            return count;
         },
     },
 };

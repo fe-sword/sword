@@ -1,8 +1,32 @@
 <template>
     <div id="app">
-        <s-badge :value="222" :max="99" :type="'success'"></s-badge>
+        <div style="width: 100px;float: right;">
+            <s-badge :count="100" :hidden="hidden">
+                <span>消息</span>
+            </s-badge>
+            <br />
+            <br />
+            <br />
+            <button @click="handleClick($event)">点击一下</button>
+        </div>
     </div>
 </template>
+
+<script>
+export default {
+    name: 'app',
+    data() {
+        return {
+            hidden: false,
+        };
+    },
+    methods: {
+        handleClick(e) {
+            this.hidden = !this.hidden;
+        },
+    },
+};
+</script>
 
 <style lang="scss">
 #app {

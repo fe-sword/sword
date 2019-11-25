@@ -2,7 +2,7 @@
  * @Author: liupei
  * @Date: 2019-11-15 17:41:14
  * @Last Modified by: liupei
- * @Last Modified time: 2019-11-22 19:10:01
+ * @Last Modified time: 2019-11-25 14:45:06
  */
 
 import Badge from './components/badge/badge';
@@ -17,7 +17,7 @@ const prototypes = {};
 
 const filters = {};
 
-const install = function(Vue, options = {}) {
+function install(Vue, options = {}) {
     if (Vue.install) {
         return null;
     }
