@@ -7,7 +7,7 @@
             <br />
             <br />
             <br />
-            <s-link type="info" @click="emitClick($event)">百度一下</s-link>
+            <s-link type="success" icon="s-icon-eleme" @click="emitClick($event)">百度一下</s-link>
             <br />
             <br />
             <br />
