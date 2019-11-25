@@ -1,0 +1,9 @@
+.s-zoom-in-center-enter-active,
+.s-zoom-in-center-leave-active {
+    transition: all 0.3s cubic-bezier(0.55, 0, 0.1, 1);
+}
+.s-zoom-in-center-enter,
+.s-zoom-in-center-leave-active {
+    opacity: 0;
+    transform: scaleX(0);
+}

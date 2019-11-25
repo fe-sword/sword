@@ -1,19 +1,41 @@
 {
-  "name": "sword",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/fe-sword/sword.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/fe-sword/sword/issues"
-  },
-  "homepage": "https://github.com/fe-sword/sword#readme"
+    "name": "sword",
+    "version": "0.0.1",
+    "description": "🏡 使用 Vue2.0 构建的 UI 框架",
+    "main": "index.js",
+    "keywords": [
+        "vue",
+        "ui",
+        "framework",
+        "sword"
+    ],
+    "scripts": {
+        "dev": "cd example && npm run serve",
+        "build:theme": "node build/bin/gen-cssfile && gulp build --gulpfile src/themes/gulpfile.js && cp-cli src/themes/lib lib/themes && rm -rd src/themes/lib"
+    },
+    "author": "liupei",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/fe-sword/sword"
+    },
+    "readmeFilename": "README.md",
+    "engines": {
+        "node": ">= 6.0.0",
+        "npm": ">= 3.0.0"
+    },
+    "browserslist": [
+        "> 1%",
+        "last 2 versions",
+        "not ie <= 8"
+    ],
+    "license": "MIT",
+    "devDependencies": {
+        "cp-cli": "^2.0.0",
+        "eslint": "^6.6.0",
+        "eslint-plugin-vue": "^6.0.1",
+        "gulp": "^4.0.2",
+        "gulp-autoprefixer": "^7.0.1",
+        "gulp-cssmin": "^0.2.0",
+        "gulp-sass": "^4.0.2"
+    }
 }
