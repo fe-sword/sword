@@ -1,5 +1,5 @@
-@import '../common/var.scss';
-@import '../common/mixin.scss';
+@import '../common/var';
+@import '../common/mixin';
 
 @include b(badge) {
     position: relative;

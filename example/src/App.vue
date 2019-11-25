@@ -7,6 +7,10 @@
             <br />
             <br />
             <br />
+            <s-link type="info" @click="emitClick($event)">百度一下</s-link>
+            <br />
+            <br />
+            <br />
             <button @click="handleClick($event)">点击一下</button>
         </div>
     </div>
@@ -23,6 +27,9 @@ export default {
     methods: {
         handleClick(e) {
             this.hidden = !this.hidden;
+        },
+        emitClick(e) {
+            console.log(e);
         },
     },
 };

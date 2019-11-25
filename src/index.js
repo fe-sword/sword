@@ -2,13 +2,15 @@
  * @Author: liupei
  * @Date: 2019-11-15 17:41:14
  * @Last Modified by: liupei
- * @Last Modified time: 2019-11-25 14:45:06
+ * @Last Modified time: 2019-11-25 17:57:20
  */
 
 import Badge from './components/badge/badge';
+import Link from './components/link/link';
 
 const components = {
     Badge,
+    Link,
 };
 
 const directives = {};
