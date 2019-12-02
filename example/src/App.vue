@@ -1,18 +1,31 @@
 <template>
     <div id="app">
-        <div style="width: 100px;float: right;">
-            <s-badge :count="100" :hidden="hidden">
-                <span>消息</span>
-            </s-badge>
+        <span>
+            1、Badge
             <br />
+        </span>
+        <s-badge :count="100" :hidden="hidden">
+            <span>消息</span>
+        </s-badge>
+        <br />
+        <br />
+        <button @click="handleClick($event)">点击一下</button>
+        <br />
+        <br />
+        <span>
+            2、Link
             <br />
+        </span>
+        <s-link type="success" icon="s-icon-eleme" @click="eventEmit($event)">百度一下</s-link>
+        <br />
+        <br />
+        <span>
+            3、Avatar
             <br />
-            <s-link type="success" icon="s-icon-eleme" @click="emitClick($event)">百度一下</s-link>
-            <br />
-            <br />
-            <br />
-            <button @click="handleClick($event)">点击一下</button>
-        </div>
+        </span>
+        <s-avatar src="/favicon.ico" alt="这是两把剑" :errorCb="eventEmit" @click="eventEmit($event)">刘培</s-avatar>
+        <br />
+        <br />
     </div>
 </template>
 
@@ -28,8 +41,9 @@ export default {
         handleClick(e) {
             this.hidden = !this.hidden;
         },
-        emitClick(e) {
+        eventEmit(e) {
             console.log(e);
+            return true;
         },
     },
 };
