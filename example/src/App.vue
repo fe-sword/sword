@@ -26,6 +26,23 @@
         <s-avatar src="/favicon.ico" alt="这是两把剑" :errorCb="eventEmit" @click="eventEmit($event)">刘培</s-avatar>
         <br />
         <br />
+        <span>
+            4、Row-Col
+            <br />
+        </span>
+        <s-row :gutter="20">
+            <s-col :span="8" :xs="{span: 4}">
+                <div style="background: red;">1</div>
+            </s-col>
+            <s-col :span="8" :xs="{span: 4}">
+                <div style="background: yellow;">2222</div>
+            </s-col>
+            <s-col :span="8" :xs="{span: 4}">
+                <div style="background: gray;">3</div>
+            </s-col>
+        </s-row>
+        <br />
+        <br />
     </div>
 </template>
 

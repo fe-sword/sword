@@ -47,8 +47,8 @@ export default {
         shape: {
             type: String,
             default: 'circle',
-            validator(val) {
-                return Props.shape.has(val);
+            validator(value) {
+                return Props.shape.has(value);
             },
         },
         fit: {
@@ -73,10 +73,10 @@ export default {
             const { size, icon, shape } = this;
 
             return {
-                ['s-avatar']: true,
-                ['s-avatar--icon']: icon,
-                [`s-avatar--${shape}`]: true,
-                [`s-avatar--${size}`]: size && isString(size),
+                [`${prefix}`]: true,
+                [`${prefix}--icon`]: icon,
+                [`${prefix}--${shape}`]: true,
+                [`${prefix}--${size}`]: size && isString(size),
             };
         },
         avatarStyle() {

@@ -1,3 +1,7 @@
 {
-    "badge": "./src/components/badge/badge"
+    "avatar": "./src/components/avatar/avatar",
+    "badge": "./src/components/badge/badge",
+    "col": "./src/components/col/col",
+    "link": "./src/components/link/link",
+    "row": "./src/components/row/row"
 }

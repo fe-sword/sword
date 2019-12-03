@@ -2,17 +2,21 @@
  * @Author: liupei
  * @Date: 2019-11-15 17:41:14
  * @Last Modified by: liupei
- * @Last Modified time: 2019-12-02 15:53:30
+ * @Last Modified time: 2019-12-03 15:07:52
  */
 
 import Avatar from './components/avatar/avatar';
 import Badge from './components/badge/badge';
+import Col from './components/col/col';
 import Link from './components/link/link';
+import Row from './components/row/row';
 
 const components = {
     Avatar,
     Badge,
+    Col,
     Link,
+    Row,
 };
 
 const directives = {};

@@ -1,9 +1,9 @@
-@import 'var';
-@import 'function';
+@import "var";
+@import "function";
 
 // BEM
 @mixin b($block) {
-    $B: $namespace + '-' + $block !global;
+    $B: $namespace + "-" + $block !global;
 
     .#{$B} {
         @content;
@@ -13,9 +13,10 @@
 @mixin e($element) {
     $E: $element !global;
     $selector: &;
-    $currentSelector: '';
+    $currentSelector: "";
+
     @each $unit in $element {
-        $currentSelector: #{$currentSelector + '.' + $B + $element-separator + $unit + ','};
+        $currentSelector: #{$currentSelector + "." + $B + $element-separator + $unit + ","};
     }
 
     @if hitAllSpecialNestRule($selector) {
@@ -37,9 +38,10 @@
 
 @mixin m($modifier) {
     $selector: &;
-    $currentSelector: '';
+    $currentSelector: "";
+
     @each $unit in $modifier {
-        $currentSelector: #{$currentSelector + & + $modifier-separator + $unit + ','};
+        $currentSelector: #{$currentSelector + & + $modifier-separator + $unit + ","};
     }
 
     @at-root {
@@ -55,5 +57,38 @@
         &.#{$state-prefix + $state} {
             @content;
         }
+    }
+}
+
+// Util
+@mixin utils-clearfix {
+    $selector: &;
+
+    @at-root {
+        #{$selector}::before,
+        #{$selector}::after {
+            display: table;
+            content: "";
+        }
+
+        #{$selector}::after {
+            clear: both;
+        }
+    }
+}
+
+// Break-point
+@mixin media-screen($key, $map: $--breakpoints) {
+    $result: map-get($map, $key);
+
+    @if $result {
+        $condition: inspect($result);
+        $condition: str-slice($condition, 2, -2);
+
+        @media only screen and ($condition) {
+            @content;
+        }
+    } @else {
+        @warn "Undefeined points: `#{$map}`";
     }
 }
