@@ -38,8 +38,8 @@ export default {
             const { type, disabled, underline } = this;
 
             return {
-                'is-disabled': disabled,
-                'is-underline': underline && !disabled,
+                ['is-disabled']: disabled,
+                ['is-underline']: underline && !disabled,
                 [`${prefix}`]: true,
                 [`${prefix}--${type}`]: !!type,
             };

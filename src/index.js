@@ -2,12 +2,15 @@
  * @Author: liupei
  * @Date: 2019-11-15 17:41:14
  * @Last Modified by: liupei
- * @Last Modified time: 2019-12-03 15:07:52
+ * @Last Modified time: 2019-12-20 16:42:43
  */
 
 import Avatar from './components/avatar/avatar';
 import Badge from './components/badge/badge';
 import Col from './components/col/col';
+import Container from './components/container/container';
+import Footer from './components/footer/footer';
+import Header from './components/header/header';
 import Link from './components/link/link';
 import Row from './components/row/row';
 
@@ -15,6 +18,9 @@ const components = {
     Avatar,
     Badge,
     Col,
+    Container,
+    Footer,
+    Header,
     Link,
     Row,
 };

@@ -43,6 +43,17 @@
         </s-row>
         <br />
         <br />
+        <span>
+            4、Container
+            <br />
+        </span>
+        <s-container>
+            <s-header class="bg-red">header</s-header>
+            <div>中心内容</div>
+            <s-footer class="bg-yellow">footer</s-footer>
+        </s-container>
+        <br />
+        <br />
     </div>
 </template>
 
@@ -86,5 +97,23 @@ export default {
             color: #42b983;
         }
     }
+}
+.bg-red {
+    background: red;
+}
+.bg-black {
+    background: black;
+}
+.bg-white {
+    background: white;
+}
+.bg-yellow {
+    background: yellow;
+}
+.bg-blue {
+    background: blue;
+}
+.bg-grey {
+    background: grey;
 }
 </style>
