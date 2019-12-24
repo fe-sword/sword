@@ -2,9 +2,10 @@
  * @Author: liupei
  * @Date: 2019-11-15 17:41:14
  * @Last Modified by: liupei
- * @Last Modified time: 2019-12-20 16:42:43
+ * @Last Modified time: 2019-12-24 11:18:10
  */
 
+import Aside from './components/aside/aside';
 import Avatar from './components/avatar/avatar';
 import Badge from './components/badge/badge';
 import Col from './components/col/col';
@@ -12,9 +13,11 @@ import Container from './components/container/container';
 import Footer from './components/footer/footer';
 import Header from './components/header/header';
 import Link from './components/link/link';
+import Main from './components/main/main';
 import Row from './components/row/row';
 
 const components = {
+    Aside,
     Avatar,
     Badge,
     Col,
@@ -22,6 +25,7 @@ const components = {
     Footer,
     Header,
     Link,
+    Main,
     Row,
 };
 

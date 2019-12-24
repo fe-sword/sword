@@ -11,7 +11,8 @@
     ],
     "scripts": {
         "dev": "cd example && npm run serve",
-        "build:theme": "node build/bin/gen-cssfile && gulp build --gulpfile src/themes/gulpfile.js && cp-cli src/themes/lib lib/themes && rm -rd src/themes/lib"
+        "build:theme": "node build/bin/gen-cssfile && gulp build --gulpfile src/themes/gulpfile.js && cp-cli src/themes/lib lib/themes && rm -rd src/themes/lib",
+        "build:componentJson": "node build/bin/gen-componentJson"
     },
     "author": "liupei",
     "repository": {

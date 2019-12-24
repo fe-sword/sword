@@ -8,7 +8,7 @@
 const prefix = 's-main';
 
 export default {
-    name: 'ElMain',
+    name: 'Main',
 
     computed: {
         mainClassName() {

@@ -44,13 +44,16 @@
         <br />
         <br />
         <span>
-            4、Container
+            5、Container
             <br />
         </span>
         <s-container>
-            <s-header class="bg-red">header</s-header>
-            <div>中心内容</div>
-            <s-footer class="bg-yellow">footer</s-footer>
+            <s-aside width="200px">Aside</s-aside>
+            <s-container>
+                <s-header>Header</s-header>
+                <s-main>Main</s-main>
+                <s-footer>Footer</s-footer>
+            </s-container>
         </s-container>
         <br />
         <br />
@@ -98,22 +101,38 @@ export default {
         }
     }
 }
-.bg-red {
-    background: red;
+.s-header,
+.s-footer {
+    background-color: yellow;
+    color: #333;
+    text-align: center;
+    line-height: 60px;
 }
-.bg-black {
-    background: black;
+
+.s-aside {
+    background-color: blue;
+    color: #333;
+    text-align: center;
+    line-height: 200px;
 }
-.bg-white {
-    background: white;
+
+.s-main {
+    background-color: red;
+    color: #333;
+    text-align: center;
+    line-height: 160px;
 }
-.bg-yellow {
-    background: yellow;
+
+body > .s-container {
+    margin-bottom: 40px;
 }
-.bg-blue {
-    background: blue;
+
+.s-container:nth-child(5) .s-aside,
+.s-container:nth-child(6) .s-aside {
+    line-height: 260px;
 }
-.bg-grey {
-    background: grey;
+
+.s-container:nth-child(7) .s-aside {
+    line-height: 320px;
 }
 </style>
