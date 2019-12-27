@@ -14,7 +14,7 @@
     -webkit-appearance: none;
     text-align: center;
     box-sizing: border-box;
-    // outline: none;
+    outline: none;
     margin: 0;
     transition: 0.1s;
     font-weight: $--button-font-weight;
@@ -28,8 +28,7 @@
     &:hover,
     &:focus {
         color: $--color-primary;
-        border-color: $--color-primary-light-7;
-        background-color: $--color-primary-light-9;
+        border-color: $--color-primary-light-3;
     }
 
     &:active {
@@ -114,6 +113,15 @@
     @include when(round) {
         border-radius: 20px;
         padding: 12px 23px;
+    }
+    @include when(press) {
+        box-shadow: 0 2px 0 rgba(0, 0, 0, 0.3), 0 2px 2px -1px rgba(0, 0, 0, 0.5), 0 1px 0 rgba(255, 255, 255, 0.3) inset;
+        &:active {
+            position: relative;
+            top: 1px;
+            text-shadow: none;
+            box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3) inset;
+        }
     }
     @include when(circle) {
         border-radius: 50%;

@@ -14,9 +14,9 @@
 <script>
 const prefix = 's-button';
 const Props = {
-    size: new Set(['medium', 'small', 'mini']),
+    size: new Set(['', 'medium', 'small', 'mini']),
     nativeType: new Set(['button', 'submit', 'reset']),
-    type: new Set(['primary', 'success', 'warning', 'info', 'danger']),
+    type: new Set(['', 'primary', 'success', 'warning', 'info', 'danger']),
 };
 
 export default {
@@ -59,6 +59,7 @@ export default {
         },
         plain: Boolean,
         round: Boolean,
+        press: Boolean,
         circle: Boolean,
         loading: Boolean,
         disabled: Boolean,
@@ -71,6 +72,7 @@ export default {
                 [`${prefix}`]: true,
                 ['is-plain']: this.plain,
                 ['is-round']: this.round,
+                ['is-press']: this.press,
                 ['is-circle']: this.circle,
                 ['is-loading']: this.loading,
                 ['is-disabled']: this.buttonDisabled,
