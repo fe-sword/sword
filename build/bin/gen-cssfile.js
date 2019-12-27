@@ -14,7 +14,7 @@ function fileExists(filePath) {
     }
 }
 
-var indexContent = '@import "../common/base.scss";\n\n';
+var indexContent = '@import "../common/base.scss";\n\n@import "./icon.scss";\n\n';
 
 Components.forEach(function (key) {
     if (['icon'].indexOf(key) > -1) {

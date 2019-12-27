@@ -47,16 +47,42 @@
             5、Container
             <br />
         </span>
-        <s-container>
+        <!-- <s-container>
             <s-aside width="200px">Aside</s-aside>
             <s-container>
                 <s-header>Header</s-header>
                 <s-main>Main</s-main>
                 <s-footer>Footer</s-footer>
             </s-container>
-        </s-container>
+        </s-container>-->
         <br />
         <br />
+        <span>
+            6、Button
+            <br />
+        </span>
+        <s-button @click="eventEmit">默认按钮</s-button>
+        <s-button type="primary" @click="eventEmit">主要按钮</s-button>
+        <s-button type="success" @click="eventEmit">成功按钮</s-button>
+        <s-button type="info" @click="eventEmit">信息按钮</s-button>
+        <s-button type="warning" @click="eventEmit">警告按钮</s-button>
+        <s-button type="danger" @click="eventEmit">危险按钮</s-button>
+        <br />
+        <br />
+        <s-button @click="eventEmit" plain>默认按钮</s-button>
+        <s-button type="primary" @click="eventEmit" icon="s-icon-edit" :loading="true" plain>主要按钮</s-button>
+        <s-button type="success" @click="eventEmit" plain>成功按钮</s-button>
+        <s-button type="info" @click="eventEmit" plain>信息按钮</s-button>
+        <s-button type="warning" @click="eventEmit" plain>警告按钮</s-button>
+        <s-button type="danger" @click="eventEmit" plain>危险按钮</s-button>
+        <br />
+        <br />
+        <s-button icon="s-icon-search" circle></s-button>
+        <s-button type="primary" icon="s-icon-edit" circle></s-button>
+        <s-button type="success" icon="s-icon-check" circle></s-button>
+        <s-button type="info" icon="s-icon-message" circle></s-button>
+        <s-button type="warning" icon="s-icon-star-off" circle></s-button>
+        <s-button type="danger" icon="s-icon-delete" circle></s-button>
     </div>
 </template>
 

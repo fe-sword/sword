@@ -2,6 +2,7 @@
     "aside": "./src/components/aside/aside",
     "avatar": "./src/components/avatar/avatar",
     "badge": "./src/components/badge/badge",
+    "button": "./src/components/button/button",
     "col": "./src/components/col/col",
     "container": "./src/components/container/container",
     "footer": "./src/components/footer/footer",

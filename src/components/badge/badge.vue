@@ -25,14 +25,14 @@ export default {
             type: Number,
             default: 99,
         },
-        isDot: Boolean,
-        hidden: Boolean,
         type: {
             type: String,
             validator(value) {
                 return Props.type.has(value);
             },
         },
+        isDot: Boolean,
+        hidden: Boolean,
     },
 
     computed: {

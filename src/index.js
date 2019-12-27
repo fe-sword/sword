@@ -2,12 +2,13 @@
  * @Author: liupei
  * @Date: 2019-11-15 17:41:14
  * @Last Modified by: liupei
- * @Last Modified time: 2019-12-24 11:18:10
+ * @Last Modified time: 2019-12-24 12:25:20
  */
 
 import Aside from './components/aside/aside';
 import Avatar from './components/avatar/avatar';
 import Badge from './components/badge/badge';
+import Button from './components/button/button';
 import Col from './components/col/col';
 import Container from './components/container/container';
 import Footer from './components/footer/footer';
@@ -20,6 +21,7 @@ const components = {
     Aside,
     Avatar,
     Badge,
+    Button,
     Col,
     Container,
     Footer,
