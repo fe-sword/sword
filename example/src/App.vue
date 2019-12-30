@@ -61,8 +61,8 @@
             6、Button
             <br />
         </span>
-        <s-button @click="eventEmit" :press="true">默认按钮</s-button>
-        <s-button type="primary" @click="eventEmit" :press="true" :round="true">主要按钮</s-button>
+        <s-button :press="true" v-wave>默认按钮</s-button>
+        <!-- <s-button type="primary" @click="eventEmit" :press="true" :round="true">主要按钮</s-button>
         <s-button type="success" @click="eventEmit" :press="true">成功按钮</s-button>
         <s-button type="info" @click="eventEmit" :press="true">信息按钮</s-button>
         <s-button type="warning" @click="eventEmit" :press="true">警告按钮</s-button>
@@ -82,7 +82,7 @@
         <s-button type="success" icon="s-icon-check" circle></s-button>
         <s-button type="info" icon="s-icon-message" circle></s-button>
         <s-button type="warning" icon="s-icon-star-off" circle></s-button>
-        <s-button type="danger" icon="s-icon-delete" circle></s-button>
+        <s-button type="danger" icon="s-icon-delete" circle></s-button>-->
     </div>
 </template>
 

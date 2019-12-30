@@ -15,16 +15,36 @@
         "G": true,
         "Utils": true
     },
-    "extends": ["plugin:vue/essential"],
+    "extends": [
+        "plugin:vue/essential"
+    ],
     "rules": {
         "no-console": "off",
         "no-debugger": "off",
-        "semi": [2, "always"],
-        "quotes": [1, "single"],
+        "semi": [
+            2,
+            "always"
+        ],
+        "quotes": [
+            1,
+            "single"
+        ],
         "eqeqeq": "off",
-        "linebreak-style": [2, "unix"],
-        "indent": [2, 4],
-        "comma-dangle": [2, "only-multiline"],
+        "linebreak-style": [
+            2,
+            "unix"
+        ],
+        "indent": [
+            2,
+            4,
+            {
+                "SwitchCase": 1
+            }
+        ],
+        "comma-dangle": [
+            2,
+            "only-multiline"
+        ],
         "no-useless-call": "off"
     }
 }
