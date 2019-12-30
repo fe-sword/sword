@@ -54,7 +54,7 @@
                 <s-main>Main</s-main>
                 <s-footer>Footer</s-footer>
             </s-container>
-        </s-container>-->
+        </s-container>
         <br />
         <br />
         <span>
@@ -62,7 +62,7 @@
             <br />
         </span>
         <s-button :press="true" v-wave>默认按钮</s-button>
-        <!-- <s-button type="primary" @click="eventEmit" :press="true" :round="true">主要按钮</s-button>
+        <s-button type="primary" @click="eventEmit" :press="true" :round="true">主要按钮</s-button>
         <s-button type="success" @click="eventEmit" :press="true">成功按钮</s-button>
         <s-button type="info" @click="eventEmit" :press="true">信息按钮</s-button>
         <s-button type="warning" @click="eventEmit" :press="true">警告按钮</s-button>
@@ -83,6 +83,16 @@
         <s-button type="info" icon="s-icon-message" circle></s-button>
         <s-button type="warning" icon="s-icon-star-off" circle></s-button>
         <s-button type="danger" icon="s-icon-delete" circle></s-button>-->
+        <br />
+        <br />
+        <span>
+            7、Form
+            <br />
+        </span>
+        <input type="text" class="s-input--warning" />
+        <br />
+        <br />
+        <textarea class="s-textarea--success"></textarea>
     </div>
 </template>
 

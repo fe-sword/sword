@@ -7,6 +7,7 @@
     "container": "./src/components/container/container",
     "footer": "./src/components/footer/footer",
     "header": "./src/components/header/header",
+    "input": "./src/components/input/input",
     "link": "./src/components/link/link",
     "main": "./src/components/main/main",
     "row": "./src/components/row/row"

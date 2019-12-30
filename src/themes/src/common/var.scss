@@ -48,6 +48,11 @@ $--color-primary-light-7: mix($--color-white, $--color-primary, 70%) !default;
 $--color-primary-light-8: mix($--color-white, $--color-primary, 80%) !default;
 $--color-primary-light-9: mix($--color-white, $--color-primary, 90%) !default;
 
+$--color-success-light-2: mix($--color-white, $--color-success, 20%) !default;
+$--color-warning-light-2: mix($--color-white, $--color-warning, 20%) !default;
+$--color-danger-light-2: mix($--color-white, $--color-danger, 20%) !default;
+$--color-info-light-2: mix($--color-white, $--color-info, 20%) !default;
+
 $--color-success-light: mix($--color-white, $--color-success, 80%) !default;
 $--color-warning-light: mix($--color-white, $--color-warning, 80%) !default;
 $--color-danger-light: mix($--color-white, $--color-danger, 80%) !default;
@@ -364,17 +369,13 @@ $--notification-info-icon-color: $--color-info !default;
 $--notification-warning-icon-color: $--color-warning !default;
 $--notification-danger-icon-color: $--color-danger !default;
 
-/* Input
--------------------------- */
+// Input
 $--input-font-size: $--font-size-base !default;
 $--input-font-color: $--color-text-regular !default;
-/// height||Other|4
 $--input-width: 140px !default;
-/// height||Other|4
 $--input-height: 40px !default;
 $--input-border: $--border-base !default;
 $--input-border-color: $--border-color-base !default;
-/// borderRadius||Border|2
 $--input-border-radius: $--border-radius-base !default;
 $--input-border-color-hover: $--border-color-hover !default;
 $--input-background-color: $--color-white !default;
@@ -383,17 +384,19 @@ $--input-color-disabled: $--font-color-disabled-base !default;
 $--input-icon-color: $--color-text-placeholder !default;
 $--input-placeholder-color: $--color-text-placeholder !default;
 $--input-max-width: 314px !default;
-
 $--input-hover-border: $--border-color-hover !default;
 $--input-clear-hover-color: $--color-text-secondary !default;
-
 $--input-focus-border: $--color-primary !default;
 $--input-focus-fill: $--color-white !default;
-
 $--input-disabled-fill: $--disabled-fill-base !default;
 $--input-disabled-border: $--disabled-border-base !default;
 $--input-disabled-color: $--disabled-color-base !default;
 $--input-disabled-placeholder-color: $--color-text-placeholder !default;
+$--input-primary-color: $--color-primary;
+$--input-danger-color: $--color-danger;
+$--input-success-color: $--color-success;
+$--input-warning-color: $--color-warning;
+$--input-info-color: $--color-info;
 
 /// fontSize||Font|1
 $--input-medium-font-size: 14px !default;

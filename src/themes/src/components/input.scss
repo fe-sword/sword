@@ -1,0 +1,70 @@
+@import "../common/var";
+@import "../common/mixin";
+
+$typeMap: (
+    primary: $--input-primary-color,
+    danger: $--input-danger-color,
+    success: $--input-success-color,
+    warning: $--input-warning-color,
+    info: $--input-info-color
+);
+
+input[type="text"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="url"],
+input.s-input,
+textarea,
+.s-textarea {
+    min-width: 1px;
+    position: relative;
+    background-color: #ffffff;
+    border-radius: 0;
+    border: 1px solid #e0e0e0;
+    display: inline-block;
+    padding: 4px 10px;
+    line-height: 1.5;
+    font-size: 14px;
+    transition: all linear 0.2s;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    font-family: inherit;
+    vertical-align: top;
+    outline: none;
+}
+
+@each $type, $primaryColor in $typeMap {
+    input[type="text"].s-input--#{$type}:focus,
+    input[type="password"].s-input--#{$type}:focus,
+    input[type="search"].s-input--#{$type}:focus,
+    input[type="number"].s-input--#{$type}:focus,
+    input[type="tel"].s-input--#{$type}:focus,
+    input[type="url"].s-input--#{$type}:focus,
+    input.s-input.s-input--#{$type}:focus {
+        border-color: $primaryColor;
+        box-shadow: 0 0 0 2px rgba($primaryColor, 0.2);
+    }
+
+    textarea.s-textarea--#{$type}:focus,
+    .s-textarea.s-textarea--#{$type}:focus {
+        border-color: $primaryColor;
+        box-shadow: 0 0 0 2px rgba($primaryColor, 0.2);
+    }
+
+    input[type="text"].s-input--#{$type}:hover,
+    input[type="password"].s-input--#{$type}:hover,
+    input[type="search"].s-input--#{$type}:hover,
+    input[type="number"].s-input--#{$type}:hover,
+    input[type="tel"].s-input--#{$type}:hover,
+    input[type="url"].s-input--#{$type}:hover,
+    input.s-input.s-input--#{$type}:hover {
+        border-color: rgba($primaryColor, 0.8);
+    }
+
+    textarea.s-textarea--#{$type}:hover,
+    .s-textarea.s-textarea--#{$type}:hover {
+        border-color: rgba($primaryColor, 0.8);
+    }
+}
